@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TabibApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TabibApp.Api.Controllers.AdminController.VerifyDoctor(System.String)">
+            <summary>
+            Logs in a user.
+            </summary>
+            <param name="loginDto">The login details.</param>
+            <returns>An IActionResult indicating the result of the operation.</returns>
+        </member>
+    </members>
+</doc>

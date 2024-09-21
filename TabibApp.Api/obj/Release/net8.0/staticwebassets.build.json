@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "doFnu9JN0q/qs82VU+6El4HTDuQ9g6YZtpQgymOmINM=",
+  "Source": "TabibApp.Api",
+  "BasePath": "_content/TabibApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TabibApp.Api\\wwwroot",
+      "Source": "TabibApp.Api",
+      "ContentRoot": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\",
+      "BasePath": "_content/TabibApp.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\MedicalHistory\\2e5b2197-d63c-43d8-ab35-003289f2c744.png",
+      "PackagePath": "staticwebassets\\MedicalHistory\\2e5b2197-d63c-43d8-ab35-003289f2c744.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\MedicalHistory\\71e20925-12f5-46dc-b783-78875542a694.jpg",
+      "PackagePath": "staticwebassets\\MedicalHistory\\71e20925-12f5-46dc-b783-78875542a694.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\MedicalHistory\\e7716209-1df9-4301-af7f-ebd36f2991d2.jpg",
+      "PackagePath": "staticwebassets\\MedicalHistory\\e7716209-1df9-4301-af7f-ebd36f2991d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\0b6a876c-bd5a-4b83-93e4-9d3b96717f9c.png",
+      "PackagePath": "staticwebassets\\uploads\\0b6a876c-bd5a-4b83-93e4-9d3b96717f9c.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\3baa5300-93fc-48db-9eeb-195f1d104018.png",
+      "PackagePath": "staticwebassets\\uploads\\3baa5300-93fc-48db-9eeb-195f1d104018.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\519012c8-5fc5-4d8f-af36-c61b23579ed6.png",
+      "PackagePath": "staticwebassets\\uploads\\519012c8-5fc5-4d8f-af36-c61b23579ed6.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\77e48eeb-9522-4074-a846-cc5b0f40aaf6.png",
+      "PackagePath": "staticwebassets\\uploads\\77e48eeb-9522-4074-a846-cc5b0f40aaf6.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\7b08577b-65fa-4454-bb09-57c6e1a199ad.png",
+      "PackagePath": "staticwebassets\\uploads\\7b08577b-65fa-4454-bb09-57c6e1a199ad.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\91418f67-7e3a-4d5c-b306-91c738f9fd08.png",
+      "PackagePath": "staticwebassets\\uploads\\91418f67-7e3a-4d5c-b306-91c738f9fd08.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\b89a9502-02b6-4d23-a245-a608ed03e39d.png",
+      "PackagePath": "staticwebassets\\uploads\\b89a9502-02b6-4d23-a245-a608ed03e39d.png"
+    },
+    {
+      "Id": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\wwwroot\\uploads\\c82a2086-cd86-4a7a-b0b5-04171395536d.png",
+      "PackagePath": "staticwebassets\\uploads\\c82a2086-cd86-4a7a-b0b5-04171395536d.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TabibApp.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TabibApp.Api.props",
+      "PackagePath": "build\\TabibApp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TabibApp.Api.props",
+      "PackagePath": "buildMultiTargeting\\TabibApp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TabibApp.Api.props",
+      "PackagePath": "buildTransitive\\TabibApp.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
