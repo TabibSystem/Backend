@@ -126,9 +126,6 @@ namespace TabibApp.Infrastructure.Migrations
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PrescriptionId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ReexaminationDate")
                         .HasColumnType("datetime2");
 
@@ -200,10 +197,6 @@ namespace TabibApp.Infrastructure.Migrations
 
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -606,9 +599,6 @@ namespace TabibApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("ChatId")
                         .HasColumnType("int");
 
@@ -620,6 +610,9 @@ namespace TabibApp.Infrastructure.Migrations
                     b.Property<int?>("DoctorId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -627,18 +620,22 @@ namespace TabibApp.Infrastructure.Migrations
                     b.Property<int?>("PatientId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ReceiverId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("SentAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("ChatId");
 
                     b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
+
+                    b.HasIndex("ReceiverId");
 
                     b.ToTable("Messages");
                 });
@@ -687,6 +684,12 @@ namespace TabibApp.Infrastructure.Migrations
                             Id = "3",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
+                        },
+                        new
+                        {
+                            Id = "4",
+                            Name = "Assistant",
+                            NormalizedName = "ASSISTANT"
                         });
                 });
 
@@ -849,31 +852,6 @@ namespace TabibApp.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Patients");
-                });
-
-            modelBuilder.Entity("Prescription", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("DoctorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PatientId")
-                        .HasColumnType("int");
-
-                    b.Property<byte[]>("fileUrl")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DoctorId");
-
-                    b.HasIndex("PatientId");
-
-                    b.ToTable("Prescriptions");
                 });
 
             modelBuilder.Entity("Specialization", b =>
@@ -1068,6 +1046,32 @@ namespace TabibApp.Infrastructure.Migrations
                     b.ToTable("DayScheduleDto");
                 });
 
+            modelBuilder.Entity("TabibApp.Application.Dtos.Medicine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SessionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SessionId");
+
+                    b.ToTable("Medicines");
+                });
+
             modelBuilder.Entity("TabibApp.Application.Dtos.RefreshToken", b =>
                 {
                     b.Property<int>("Id")
@@ -1097,6 +1101,36 @@ namespace TabibApp.Infrastructure.Migrations
                     b.HasIndex("ApplicationUserId");
 
                     b.ToTable("RefreshToken");
+                });
+
+            modelBuilder.Entity("TabibApp.Application.Dtos.Session", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Diagnosis")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("Sessions");
                 });
 
             modelBuilder.Entity("Appointment", b =>
@@ -1292,10 +1326,6 @@ namespace TabibApp.Infrastructure.Migrations
 
             modelBuilder.Entity("Message", b =>
                 {
-                    b.HasOne("ApplicationUser", null)
-                        .WithMany("Messages")
-                        .HasForeignKey("ApplicationUserId");
-
                     b.HasOne("Chat", "Chat")
                         .WithMany("Messages")
                         .HasForeignKey("ChatId")
@@ -1310,7 +1340,15 @@ namespace TabibApp.Infrastructure.Migrations
                         .WithMany("Messages")
                         .HasForeignKey("PatientId");
 
+                    b.HasOne("ApplicationUser", "Receiver")
+                        .WithMany("Messages")
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Chat");
+
+                    b.Navigation("Receiver");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1386,33 +1424,6 @@ namespace TabibApp.Infrastructure.Migrations
                     b.Navigation("ApplicationUser");
                 });
 
-            modelBuilder.Entity("Prescription", b =>
-                {
-                    b.HasOne("Doctor", "Doctor")
-                        .WithMany("Prescriptions")
-                        .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("Appointment", "Appointment")
-                        .WithOne("Prescription")
-                        .HasForeignKey("Prescription", "Id")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("Patient", "Patient")
-                        .WithMany("Prescriptions")
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Appointment");
-
-                    b.Navigation("Doctor");
-
-                    b.Navigation("Patient");
-                });
-
             modelBuilder.Entity("TabibApp.Application.Dtos.DayScheduleDto", b =>
                 {
                     b.HasOne("Clinic", null)
@@ -1420,11 +1431,41 @@ namespace TabibApp.Infrastructure.Migrations
                         .HasForeignKey("ClinicId");
                 });
 
+            modelBuilder.Entity("TabibApp.Application.Dtos.Medicine", b =>
+                {
+                    b.HasOne("TabibApp.Application.Dtos.Session", "Session")
+                        .WithMany("Medicines")
+                        .HasForeignKey("SessionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Session");
+                });
+
             modelBuilder.Entity("TabibApp.Application.Dtos.RefreshToken", b =>
                 {
                     b.HasOne("ApplicationUser", null)
                         .WithMany("RefreshTokens")
                         .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("TabibApp.Application.Dtos.Session", b =>
+                {
+                    b.HasOne("Doctor", "Doctor")
+                        .WithMany("Sessions")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Patient", "Patient")
+                        .WithMany("Sessions")
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("ApplicationUser", b =>
@@ -1452,9 +1493,6 @@ namespace TabibApp.Infrastructure.Migrations
             modelBuilder.Entity("Appointment", b =>
                 {
                     b.Navigation("Chat")
-                        .IsRequired();
-
-                    b.Navigation("Prescription")
                         .IsRequired();
                 });
 
@@ -1494,7 +1532,7 @@ namespace TabibApp.Infrastructure.Migrations
 
                     b.Navigation("Messages");
 
-                    b.Navigation("Prescriptions");
+                    b.Navigation("Sessions");
                 });
 
             modelBuilder.Entity("Governorate", b =>
@@ -1512,12 +1550,17 @@ namespace TabibApp.Infrastructure.Migrations
 
                     b.Navigation("Messages");
 
-                    b.Navigation("Prescriptions");
+                    b.Navigation("Sessions");
                 });
 
             modelBuilder.Entity("Specialization", b =>
                 {
                     b.Navigation("Doctors");
+                });
+
+            modelBuilder.Entity("TabibApp.Application.Dtos.Session", b =>
+                {
+                    b.Navigation("Medicines");
                 });
 #pragma warning restore 612, 618
         }

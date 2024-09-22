@@ -20,6 +20,10 @@ public static class AddApplicationServicesExtention
         services.AddScoped<IMedicalHistoryService,MedicalHistoryService>();
         services.AddScoped<IMedicalHistoryRecordsRepository,MedicalHistoryRecordsRepository>();
         services.AddScoped<IAdminDashboardRepository,AdminDashboardRepository>();
+        services.AddScoped<IAssistantRepository,AssistantRepository>();
+        services.AddScoped<ISessionRepository,SessionRepository>();
+        services.AddScoped<ISessionService,SessionService>();
+        services.AddScoped<IChatRepository,ChatRepository>();
         services.AddScoped<IDoctorDashboardRepository,DoctorDashboardRepository>();
         services.AddScoped<IClinicService, ClinicService>();
         services.AddScoped<IDoctorService, DoctorService>();

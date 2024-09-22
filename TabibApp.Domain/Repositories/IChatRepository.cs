@@ -1,13 +1,15 @@
-﻿namespace TabibApp.Application;
+﻿using TabibApp.Application.Dtos;
+
+namespace TabibApp.Application;
 
 public interface IChatRepository
 {
-    Chat GetChat(int id);
+    ChatDto GetChat(int id);
     Task CreateRoom(string name, string userId);
     Task JoinRoom(int chatId, string userId);
-    IEnumerable<Chat> GetChats(string userId);
-    Task<int> CreatePrivateRoom(string rootId, string targetId);
-    IEnumerable<Chat> GetPrivateChats(string userId);
+    IEnumerable<ChatDto> GetChats(string userId);
+    Task<int> CreatePrivateRoom(string rootId, string targetId,int appointmentId);
+    IEnumerable<PrivateChatDto> GetPrivateChats(string userId);
     Task<Chat> CreateAppointmentChat(int appointmentId);
 
     Task<Message> CreateMessage(int chatId, string message, string userId);

@@ -72,7 +72,8 @@ public class SeedingData
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
                 new IdentityRole { Id = "2", Name = "Patient", NormalizedName = "PATIENT" },
-                new IdentityRole { Id = "3", Name = "Doctor", NormalizedName = "DOCTOR" }
+                new IdentityRole { Id = "3", Name = "Doctor", NormalizedName = "DOCTOR" },
+               new IdentityRole { Id = "4", Name = "Assistant", NormalizedName = "ASSISTANT" }
             );
         }
 }

@@ -31,10 +31,6 @@ namespace TabibApp.Infrastructure.Configration
                 .HasForeignKey(a => a.AppointmentSlotId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(a => a.Prescription)
-                .WithOne(p => p.Appointment)
-                .HasForeignKey<Appointment>(a => a.PrescriptionId)
-                .OnDelete(DeleteBehavior.SetNull);
 
         }
     }

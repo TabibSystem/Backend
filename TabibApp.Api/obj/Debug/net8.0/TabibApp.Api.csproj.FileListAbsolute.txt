@@ -158,3 +158,6 @@ C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\
 C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\net8.0\TabibApp.Api.xml
 C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\obj\Debug\net8.0\TabibApp.Api.xml
 C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\net8.0\TabibApp.Api.staticwebassets.runtime.json
+C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\LAPTOP WORLD\OneDrive\Documents\GitHub\Back-end\TabibApp.Api\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

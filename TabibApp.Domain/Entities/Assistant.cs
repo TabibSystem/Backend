@@ -1,7 +1,6 @@
 ﻿public class Assistant
 {
     public int Id { get; set; }
-    public string FullName { get; set; }
 
     public string ApplicationUserId { get; set; }
     public ApplicationUser ApplicationUser { get; set; }

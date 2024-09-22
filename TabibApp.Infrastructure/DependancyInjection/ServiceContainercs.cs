@@ -14,14 +14,14 @@ public static class ServiceContainercs
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-         var connectionString = configuration.GetConnectionString("productionconnection");
+         var connectionString = configuration.GetConnectionString("DefaultConnection");
         var emailConfiguration = configuration.GetSection("EmailConfiguration").Get<EmailConfigration>();
          services.Configure<JwtSettings>(configuration.GetSection("jwt"));
 
         services.AddSingleton(emailConfiguration);
 
     services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("productionconnection"),
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
 
     services.AddIdentity<ApplicationUser, IdentityRole>()

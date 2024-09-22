@@ -1,4 +1,6 @@
-﻿public class Doctor
+﻿using TabibApp.Application.Dtos;
+
+public class Doctor
 {
     public int Id { get; set; }
 
@@ -18,7 +20,7 @@
     public ApplicationUser ApplicationUser { get; set; }
 
     public ICollection<Appointment> Appointments { get; set; }
-    public ICollection<Prescription> Prescriptions { get; set; }
+    public ICollection<Session> Sessions { get; set; }
     public ICollection<Message> Messages { get; set; }
     public ICollection<Assistant> Assistants { get; set; }
     public ICollection<Patient> Patients { get; set; }

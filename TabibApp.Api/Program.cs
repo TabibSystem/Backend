@@ -7,7 +7,9 @@ using TabibApp.Application.Interfaces;
 using TabibApp.Application.RegisterServices;
 using TabibApp.Infrastructure.Data;
 using TabibApp.Infrastructure.DependancyInjection;
-    
+using Microsoft.AspNetCore.SignalR;
+using TabibApp.Api.Hubs;
+
 namespace TabibApp.Api
 {
     public class Program
@@ -67,12 +69,16 @@ namespace TabibApp.Api
 
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddApplicationServices();
+
+            // Add SignalR services
+            builder.Services.AddSignalR();
+
             var app = builder.Build();
 
-               // app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            
+            // app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
+
             app.UseStaticFiles();
             app.UseHttpsRedirection();
 
@@ -82,6 +88,9 @@ namespace TabibApp.Api
             app.UseAuthorization();
 
             app.MapControllers();
+
+            // Map SignalR hubs
+            app.MapHub<ChatHub>("/chathub");
 
             app.Run();
         }

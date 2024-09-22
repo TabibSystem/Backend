@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc7b6656a41174a3636a3cc3c11e505d9b8d3720")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6cd9c03b8688a9f2e7d5667d9c18874b55cfd15")]
 [assembly: System.Reflection.AssemblyProductAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

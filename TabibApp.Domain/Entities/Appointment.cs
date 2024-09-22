@@ -14,8 +14,7 @@
     public Patient Patient { get; set; }
     public int AppointmentSlotId { get; set; }
     public AppointmentSlot AppointmentSlot { get; set; }
-    public int? PrescriptionId { get; set; }
-    public Prescription Prescription { get; set; }
+
     public int? ChatId { get; set; }
     public Chat Chat { get; set; }
     public bool IsChatActive()

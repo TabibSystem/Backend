@@ -17,11 +17,13 @@ namespace TabibApp.Api.Controllers
     {
         private readonly IAppointmentService _appointmentService;
         private readonly IAppointmentRepository _appointmentRepository;
+        private readonly ILogger<AppointmentController> _logger;
 
-        public AppointmentController(IAppointmentService appointmentService, IAppointmentRepository appointmentRepository)
+        public AppointmentController(IAppointmentService appointmentService, IAppointmentRepository appointmentRepository,ILogger<AppointmentController> logger)
         {
             _appointmentService = appointmentService;
             _appointmentRepository = appointmentRepository;
+            _logger = logger;
         }
 
 
@@ -77,7 +79,7 @@ namespace TabibApp.Api.Controllers
         /// <returns>The booked appointment.</returns>
         /// <response code="201">Returns the booked appointment.</response>
         /// <response code="400">If the booking data is invalid or the booking fails.</response>
-        [Authorize("Doctor,Patient")]
+        [Authorize("Patient")]
         [HttpPost("/book")]
         public async Task<IActionResult> BookAppointment([FromBody] BookAppointmentDto appointmentDto)
         {
@@ -88,6 +90,8 @@ namespace TabibApp.Api.Controllers
             }
             catch (Exception ex)
             {
+                // Log the exception for more details
+                _logger.LogError(ex, "An error occurred while booking the appointment.");
                 return BadRequest(ex.Message);
             }
         }

@@ -29,11 +29,12 @@ namespace TabibApp.Infrastructure.Configration
                 .WithOne(c => c.OwnerDoctor)
                 .HasForeignKey(c => c.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasMany(d => d.Prescriptions)
-                .WithOne(p => p.Doctor)
-                .HasForeignKey(p => p.DoctorId)
+            
+              builder.HasMany(d => d.Sessions)
+                .WithOne(s => s.Doctor)
+                .HasForeignKey(s => s.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
+
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TabibApp.Application;
 using TabibApp.Application.Dtos;
 using TabibApp.Infrastructure.Data;
@@ -7,10 +8,14 @@ namespace TabibApp.Infrastructure.Repository;
 public class AppointmentRepository:IAppointmentRepository
 {
     private readonly AppDbContext _context;
+    private readonly IChatRepository _chatRepository;
+    private readonly ILogger<AppointmentRepository> _logger;
 
-    public AppointmentRepository(AppDbContext context)
+    public AppointmentRepository(AppDbContext context,IChatRepository chatRepository,ILogger<AppointmentRepository> logger)
     {
         _context = context;
+        _chatRepository = chatRepository;
+        _logger = logger;
     }
 
     public async Task<string> GetDoctorId(int DoctorId)
@@ -80,47 +85,70 @@ public class AppointmentRepository:IAppointmentRepository
 
         return slotDtos;
     }
+    
+public async Task<AppointmentDto> BookAppointment(BookAppointmentDto appointmentDto)
+{
+ var appointmentSlot = await _context.AppointmentSlots
+        .FirstOrDefaultAsync(slot => slot.Id == appointmentDto.AppointmentSlotId && slot.IsAvailable);
 
-    public async Task<AppointmentDto> BookAppointment(BookAppointmentDto appointmentDto)
+    if (appointmentSlot == null)
     {
-        var appointmentSlot = await _context.AppointmentSlots
-            .FirstOrDefaultAsync(slot => slot.Id == appointmentDto.AppointmentSlotId && slot.IsAvailable);
-
-        if (appointmentSlot == null)
-        {
-            throw new Exception("Appointment slot not available.");
-        }
-
-        var PatientId =await _context.Doctors.FirstOrDefaultAsync(d => d.ApplicationUserId == appointmentDto.PatientId);
-         var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.ApplicationUserId == appointmentDto.PatientId);
-
-        var appointment = new Appointment
-        {
-            AppointmentDate = DateTime.Today.Add(appointmentSlot.StartTime), 
-            ReexaminationDate=DateTime.Now.AddDays(10),
-            Status = AppointmentStatus.Scheduled,
-            DateBooked = DateTime.Now,
-            DoctorId = appointmentSlot.DoctorId,
-            PatientId = PatientId.Id,
-            AppointmentSlotId = appointmentSlot.Id,
-        };
-
-        appointmentSlot.IsAvailable = false;
-
-        _context.Appointments.Add(appointment);
-        await _context.SaveChangesAsync();
-
-        return new AppointmentDto
-        {
-            Id = appointment.Id,
-            AppointmentDate = appointment.AppointmentDate,
-            Status = appointment.Status,
-            DateBooked = appointment.DateBooked,
-            DoctorId = doctor.ApplicationUserId,
-            PatientId = PatientId.ApplicationUserId,
-            AppointmentSlotId = appointment.AppointmentSlotId,
-        };
+        throw new Exception("Appointment slot not available.");
     }
+
+    var patient = await _context.Patients.FirstOrDefaultAsync(p => p.ApplicationUserId == appointmentDto.PatientId);
+    if (patient == null)
+    {
+        throw new Exception("Patient not found.");
+    }
+
+    var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.ApplicationUserId == appointmentDto.DoctorId);
+    if (doctor == null)
+    {
+        throw new Exception("Doctor not found.");
+    }
+
+    var appointment = new Appointment
+    {
+        AppointmentDate = DateTime.Today.Add(appointmentSlot.StartTime),
+        ReexaminationDate = DateTime.Now.AddDays(10),
+        Status = AppointmentStatus.Scheduled,
+        DateBooked = DateTime.Now,
+        DoctorId = appointmentSlot.DoctorId,
+        PatientId = patient.Id,
+        AppointmentSlotId = appointmentSlot.Id,
+    };
+
+    appointmentSlot.IsAvailable = false;
+
+    _context.Appointments.Add(appointment);
+
+    try
+    {
+        await _context.SaveChangesAsync(); 
+
+        await _chatRepository.CreatePrivateRoom( appointmentDto.DoctorId, patient.ApplicationUserId,appointment.Id);
+    }
+    catch (DbUpdateException ex)
+    {
+        // Log the inner exception for more details
+        var innerException = ex.InnerException?.Message;
+        _logger.LogError(ex, "An error occurred while saving the entity changes: {InnerException}", innerException);
+        throw new Exception($"An error occurred while saving the entity changes: {innerException}", ex);
+    }
+
+    return new AppointmentDto
+    {
+        Id = appointment.Id,
+        AppointmentDate = appointment.AppointmentDate,
+        Status = appointment.Status,
+        DateBooked = appointment.DateBooked,
+        DoctorId = doctor.ApplicationUserId,
+        PatientId = patient.ApplicationUserId,
+        AppointmentSlotId = appointment.AppointmentSlotId,
+    };
+
+}
     public async Task<List<AppointmentDto>> GetAppointmentsForPatient(string userId)
     {
         
