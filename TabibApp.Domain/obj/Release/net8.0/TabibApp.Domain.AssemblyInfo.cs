@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TabibApp.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6cd9c03b8688a9f2e7d5667d9c18874b55cfd15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f8000149d59f88d48120d9502fd1e7887e012de")]
 [assembly: System.Reflection.AssemblyProductAttribute("TabibApp.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TabibApp.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -232,7 +232,7 @@ public async Task<AppointmentDto> BookAppointment(BookAppointmentDto appointment
             EndTime = slot.EndTime,
             DayOfWeek = slot.DayOfWeek,
             ClinicId = slot.ClinicId,
-            IsAvailable = slot.IsAvailable,
+            IsAvailable = slot.IsAvailable, 
             DoctorId = slot.DoctorId
         }).ToList();
     }

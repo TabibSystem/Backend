@@ -11,6 +11,6 @@ public interface IClinicService
     Task<IEnumerable<Clinic>> GetClinicsByDoctorIdAsync(string applicationUserId);
     
     Task<Clinic?> UpdateClinicAsync(int clinicId, ClinicDto updatedClinic);
-    Task<bool> DeleteClinicAsync(int id); // Added method for deleting a clinic
+    Task<bool> DeleteClinicAsync(int id); 
     Task<int> SaveChangesAsync();
 }

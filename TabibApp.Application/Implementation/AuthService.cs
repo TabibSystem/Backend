@@ -40,6 +40,8 @@ public class AuthService : IAuthService
         _webHostEnvironment = webHostEnvironment;
     }
 
+
+
     public async Task<AuthResultDto> RegisterPatientAsync(RegisterPatientDto registerPatientDto)
     {
 
@@ -174,8 +176,7 @@ public class AuthService : IAuthService
             };
 
             await _doctorRepository.Add(doctor);
-            await _doctorRepository.SaveChangesAsync();
-            await transaction.CommitAsync();
+          
             var token = await _usermanger.GenerateEmailConfirmationTokenAsync(user);
             var param = new Dictionary<string, string?>();
             param.Add("token", token);
@@ -184,6 +185,7 @@ public class AuthService : IAuthService
 
             _emailsender.CreateAccountConfirmationEmail(user, callback);
             await _usermanger.UpdateAsync(user);
+            await transaction.CommitAsync();
             return new AuthResultDto()
             {
                 Id=user.Id,

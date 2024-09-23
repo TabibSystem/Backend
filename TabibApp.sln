@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabibApp.Infrastructure", "
 		{E3512298-C86F-4A02-930E-9364CDD0F219} = {E3512298-C86F-4A02-930E-9364CDD0F219}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DF44111D-0518-4C51-AD17-A7F74F975C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF44111D-0518-4C51-AD17-A7F74F975C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF44111D-0518-4C51-AD17-A7F74F975C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -56,6 +56,121 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TabibApp.Api.Controllers.AssistantController",
+    "Method": "GetAll",
+    "RelativePath": "api/Assistant",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TabibApp.Application.Dtos.AssistantDto, TabibApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.AssistantController",
+    "Method": "Create",
+    "RelativePath": "api/Assistant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createAssistantDto",
+        "Type": "TabibApp.Application.Dtos.CreateAssistantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TabibApp.Application.Dtos.AssistantDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.AssistantController",
+    "Method": "GetById",
+    "RelativePath": "api/Assistant/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TabibApp.Application.Dtos.AssistantDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.AssistantController",
+    "Method": "Update",
+    "RelativePath": "api/Assistant/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateAssistantDto",
+        "Type": "TabibApp.Application.Dtos.CreateAssistantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.AssistantController",
+    "Method": "Delete",
+    "RelativePath": "api/Assistant/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TabibApp.Api.Controllers.AuthenticationController",
     "Method": "Emailconfirmation",
     "RelativePath": "api/Authentication/ConfirmEmail",
@@ -276,6 +391,90 @@
       },
       {
         "Name": "ClientUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.ChatController",
+    "Method": "CreateRoom",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.ChatController",
+    "Method": "JoinRoom",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.ChatController",
+    "Method": "Chat",
+    "RelativePath": "api/Chat/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.ChatController",
+    "Method": "Private",
+    "RelativePath": "api/Chat/private",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/send-message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SenderId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -707,6 +906,89 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.SessionController",
+    "Method": "CreateSession",
+    "RelativePath": "api/Session",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createSessionDto",
+        "Type": "TabibApp.Application.Dtos.CreateSessionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TabibApp.Application.Dtos.SessionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.SessionController",
+    "Method": "GetSessionsByPatientName",
+    "RelativePath": "api/Session/doctor/{doctorId}/patientname/{patientName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "doctorId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TabibApp.Application.Dtos.SessionDto, TabibApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TabibApp.Api.Controllers.SessionController",
+    "Method": "GetSessionsByPatientId",
+    "RelativePath": "api/Session/patient/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TabibApp.Application.Dtos.SessionDto, TabibApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "TabibApp.Api.Controllers.SpecializationController",
