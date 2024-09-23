@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f8000149d59f88d48120d9502fd1e7887e012de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecc97326dd4899307aa2e8de7b18ae4427c3ed73")]
 [assembly: System.Reflection.AssemblyProductAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TabibApp.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

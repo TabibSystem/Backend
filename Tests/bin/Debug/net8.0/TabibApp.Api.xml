@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TabibApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TabibApp.Api.Controllers.AdminController.GetDashboardDataAsync">
+            <summary>
+            Retrieves the admin dashboard data.
+            </summary>
+            <returns>An <see cref="!:AdminDashboardInsights"/> containing the total number of doctors, patients, appointments, clinics, and a list of pending doctor verifications.</returns>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AdminController.GetDoctorsAsync">
+            <summary>
+            Retrieves a list of doctors.
+            </summary>
+            <response code="200">Returns the list of doctors.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AdminController.VerifyDoctor(System.String)">
+            <summary>
+            Verifies a doctor by their ID.
+            </summary>
+            <response code="200">If the doctor was successfully verified.</response>
+            <response code="404">If the doctor with the specified ID was not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.Createslots(System.Int32,System.Collections.Generic.List{TabibApp.Application.Dtos.DayScheduleDto},System.TimeSpan,System.String)">
+            <summary>
+            Generates appointment slots for a clinic.
+            </summary>
+            <param name="clinicId">The ID of the clinic.</param>
+            <param name="daySchedules">The day schedules for the clinic.</param>
+            <param name="duration">The duration of each appointment slot.</param>
+            <param name="DoctorId">The ID of the doctor.</param>
+            <returns>A list of generated appointment slots.</returns>
+            <response code="200">Returns the list of generated appointment slots.</response>
+            <response code="500">If an internal server error occurs.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.GetAppointmentSlotsByClinicId(System.Int32)">
+            <summary>
+            Gets appointment slots for a clinic by clinic ID.
+            </summary>
+            <param name="clinicId">The ID of the clinic.</param>
+            <returns>A list of appointment slots for the clinic.</returns>
+            <response code="200">Returns the list of appointment slots for the clinic.</response>
+            <response code="404">If no appointment slots are found for the given clinic ID.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.BookAppointment(TabibApp.Application.Dtos.BookAppointmentDto)">
+            <summary>
+            Books an appointment.
+            </summary>
+            <param name="appointmentDto">The appointment data transfer object.</param>
+            <returns>The booked appointment.</returns>
+            <response code="201">Returns the booked appointment.</response>
+            <response code="400">If the booking data is invalid or the booking fails.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.GetAppointmentsForPatient(System.String)">
+            <summary>
+            Gets appointments for a patient by patient ID.
+            </summary>
+            <param name="PatientId">The ID of the patient.</param>
+            <returns>A list of appointments for the patient.</returns>
+            <response code="200">Returns the list of appointments for the patient.</response>
+            <response code="404">If no appointments are found for the given patient ID.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.GetAppointmentsForDoctor(System.String)">
+            <summary>
+            Gets appointments for a doctor by doctor ID.
+            </summary>
+            <param name="DoctorId">The ID of the doctor.</param>
+            <returns>A list of appointments for the doctor.</returns>
+            <response code="200">Returns the list of appointments for the doctor.</response>
+            <response code="404">If no appointments are found for the given doctor ID.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.AppointmentController.CancelAppointment(System.Int32)">
+            <summary>
+            Cancels an appointment by appointment slot ID.
+            </summary>
+            <param name="AppointmentSlotId">The ID of the appointment slot to cancel.</param>
+            <returns>No content if the cancellation was successful.</returns>
+            <response code="200">If the appointment was successfully canceled.</response>
+            <response code="404">If the appointment slot is not found.</response>
+            <response code="400">If the cancellation fails.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.ClinicController.CreateClinic(TabibApp.Application.Dtos.ClinicDto)">
+            <summary>
+            Creates a new clinic.
+            </summary>
+            <param name="clinicDto">The clinic data transfer object.</param>
+            <returns>The created clinic.</returns>
+            <response code="201">Returns the newly created clinic.</response>
+            <response code="400">If the clinic data is invalid or the clinic already exists.</response>
+            <response code="404">If the clinic could not be created.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.ClinicController.GetClinicById(System.String)">
+            <summary>
+            Gets a clinic by doctor ID.
+            </summary>
+            <param name="doctorId">The ID of the doctor.</param>
+            <returns>The clinic associated with the specified doctor ID.</returns>
+            <response code="200">Returns the clinic associated with the specified doctor ID.</response>
+            <response code="404">If the clinic is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.ClinicController.UpdateClinic(System.Int32,TabibApp.Application.Dtos.ClinicDto)">
+            <summary>
+            Updates an existing clinic.
+            </summary>
+            <param name="clinicId">The ID of the clinic to update.</param>
+            <param name="clinicDto">The updated clinic data transfer object.</param>
+            <returns>The updated clinic.</returns>
+            <response code="200">Returns the updated clinic.</response>
+            <response code="400">If the clinic data is invalid.</response>
+            <response code="404">If the clinic is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.ClinicController.DeleteClinic(System.Int32)">
+            <summary>
+            Deletes a clinic by ID.
+            </summary>
+            <param name="clinicId">The ID of the clinic to delete.</param>
+            <returns>No content if the deletion was successful.</returns>
+            <response code="204">If the clinic was successfully deleted.</response>
+            <response code="404">If the clinic is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.GetAllDoctors(System.Int32,System.Int32)">
+            <summary>
+            Gets all doctors with pagination.
+            </summary>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">The page size.</param>
+            <returns>A list of doctors.</returns>
+            <response code="200">Returns the list of doctors.</response>
+            <response code="400">If the page number is less than or equal to 0.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.GetDoctorById(System.String)">
+            <summary>
+            Gets a doctor by ID.
+            </summary>
+            <param name="id">The ID of the doctor.</param>
+            <returns>The doctor with the specified ID.</returns>
+            <response code="200">Returns the doctor with the specified ID.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.AddDoctor(TabibApp.Application.Dtos.DoctorDto)">
+            <summary>
+            Adds a new doctor.
+            </summary>
+            <param name="doctorDto">The doctor data transfer object.</param>
+            <returns>The created doctor.</returns>
+            <response code="201">Returns the newly created doctor.</response>
+            <response code="400">If the doctor data is invalid.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.UpdateDoctor(System.String,TabibApp.Application.Dtos.DoctorDto)">
+            <summary>
+            Updates an existing doctor.
+            </summary>
+            <param name="id">The ID of the doctor to update.</param>
+            <param name="doctorDto">The updated doctor data transfer object.</param>
+            <returns>The updated doctor.</returns>
+            <response code="200">Returns the updated doctor.</response>
+            <response code="400">If the doctor ID is null or empty, or if the doctor data is invalid.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.DeleteDoctor(System.String)">
+            <summary>
+            Deletes a doctor by ID.
+            </summary>
+            <param name="id">The ID of the doctor to delete.</param>
+            <returns>No content if the deletion was successful.</returns>
+            <response code="204">If the doctor was successfully deleted.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorController.SearchDoctors(TabibApp.Application.Dtos.DoctorSearchCriteria)">
+            <summary>
+            Searches for doctors based on specified criteria.
+            </summary>
+            <param name="criteria">The search criteria.</param>
+            <returns>A list of doctors that match the search criteria.</returns>
+            <response code="200">Returns the list of doctors that match the search criteria.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.DoctorDashboardController.GetDoctorDashboardDataAsync(System.String)">
+            <summary>
+            Retrieves the doctor's dashboard data.
+            </summary>
+            <param name="doctorId">The ID of the doctor.</param>
+            <returns>Returns the doctor's dashboard data.</returns>
+            <response code="200">Returns the doctor's dashboard data.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.MedicalHistoryController.UploadMedicalHistory(TabibApp.Application.Dtos.MedicalHistoryUploadDto)">
+            <summary>
+            Uploads a medical history file for a patient.
+            </summary>
+            <param name="dto">The medical history upload data transfer object.</param>
+            <returns>A message indicating the result of the upload.</returns>
+            <response code="200">If the file was uploaded successfully.</response>
+            <response code="400">If no file was uploaded or the file upload failed.</response>
+            <response code="404">If the patient ID is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.MedicalHistoryController.GetMedicalHistoryRecords(System.String)">
+            <summary>
+            Gets the medical history records for a patient.
+            </summary>
+            <param name="patientId">The ID of the patient.</param>
+            <returns>A list of medical history records for the patient.</returns>
+            <response code="200">Returns the list of medical history records.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.MedicalHistoryController.SaveFileAsync(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            Saves a file to the specified folder.
+            </summary>
+            <param name="file">The file to save.</param>
+            <param name="folderName">The name of the folder to save the file in.</param>
+            <returns>The URL of the saved file.</returns>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.SpecializationController.AddSpecialization(TabibApp.Application.Dtos.SpecializationDto)">
+            <summary>
+            Adds a new specialization.
+            </summary>
+            <param name="specializationDto">The specialization data transfer object.</param>
+            <returns>The created specialization.</returns>
+            <response code="201">Returns the newly created specialization.</response>
+            <response code="400">If the specialization data is invalid.</response>
+            <response code="409">If there is a conflict with the existing data.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.SpecializationController.GetAllSpecializations">
+            <summary>
+            Gets all specializations.
+            </summary>
+            <returns>A list of specializations.</returns>
+            <response code="200">Returns the list of specializations.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.SpecializationController.GetSpecializationByName(System.String)">
+            <summary>
+            Gets a specialization by name.
+            </summary>
+            <param name="name">The name of the specialization.</param>
+            <returns>The specialization with the specified name.</returns>
+            <response code="200">Returns the specialization with the specified name.</response>
+            <response code="404">If the specialization is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.SpecializationController.GetSpecializationById(System.Int32)">
+            <summary>
+            Gets a specialization by ID.
+            </summary>
+            <param name="id">The ID of the specialization.</param>
+            <returns>The specialization with the specified ID.</returns>
+            <response code="200">Returns the specialization with the specified ID.</response>
+            <response code="404">If the specialization is not found.</response>
+        </member>
+        <member name="M:TabibApp.Api.Controllers.SpecializationController.DeleteSpecialization(System.Int32)">
+            <summary>
+            Deletes a specialization by ID.
+            </summary>
+            <param name="id">The ID of the specialization to delete.</param>
+            <returns>No content if the deletion was successful.</returns>
+            <response code="204">If the specialization was successfully deleted.</response>
+            <response code="404">If the specialization is not found.</response>
+        </member>
+        <member name="M:TabibApp.Application.Implementation.PatientController.GetAll">
+            <summary>
+            Gets all patients.
+            </summary>
+            <returns>A list of patients.</returns>
+            <response code="200">Returns the list of patients.</response>
+        </member>
+        <member name="M:TabibApp.Application.Implementation.PatientController.GetById(System.String)">
+            <summary>
+            Gets a patient by ID.
+            </summary>
+            <param name="id">The ID of the patient.</param>
+            <returns>The patient with the specified ID.</returns>
+            <response code="200">Returns the patient with the specified ID.</response>
+            <response code="400">If the patient ID is null or empty.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+        <member name="M:TabibApp.Application.Implementation.PatientController.Add(TabibApp.Application.Dtos.PatientDto)">
+            <summary>
+            Adds a new patient.
+            </summary>
+            <param name="patientDto">The patient data transfer object.</param>
+            <returns>The created patient.</returns>
+            <response code="201">Returns the newly created patient.</response>
+            <response code="400">If the patient data is invalid.</response>
+        </member>
+        <member name="M:TabibApp.Application.Implementation.PatientController.Update(System.String,TabibApp.Application.Dtos.PatientDto)">
+            <summary>
+            Updates an existing patient.
+            </summary>
+            <param name="id">The ID of the patient to update.</param>
+            <param name="patientDto">The updated patient data transfer object.</param>
+            <returns>The updated patient.</returns>
+            <response code="200">Returns the updated patient.</response>
+            <response code="400">If the patient ID is null or empty, or if the patient data is invalid.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+        <member name="M:TabibApp.Application.Implementation.PatientController.Delete(System.String)">
+            <summary>
+            Deletes a patient by ID.
+            </summary>
+            <param name="id">The ID of the patient to delete.</param>
+            <returns>No content if the deletion was successful.</returns>
+            <response code="204">If the patient was successfully deleted.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+    </members>
+</doc>

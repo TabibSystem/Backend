@@ -1,0 +1,412 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|solutionrelative:tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF44111D-0518-4C51-AD17-A7F74F975C0A}|TabibApp.Infrastructure\\TabibApp.Infrastructure.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.infrastructure\\dependancyinjection\\servicecontainercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF44111D-0518-4C51-AD17-A7F74F975C0A}|TabibApp.Infrastructure\\TabibApp.Infrastructure.csproj|solutionrelative:tabibapp.infrastructure\\dependancyinjection\\servicecontainercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tests\\controllerstests\\medicalhistorycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|solutionrelative:tests\\controllerstests\\medicalhistorycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\medicalhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\medicalhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D8B1D4B-84BE-459C-A853-2A0690886E27}|TabibApp.Domain\\TabibApp.Domain.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.domain\\repositories\\imedicalhistoryrecordsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D8B1D4B-84BE-459C-A853-2A0690886E27}|TabibApp.Domain\\TabibApp.Domain.csproj|solutionrelative:tabibapp.domain\\repositories\\imedicalhistoryrecordsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tests\\controllerstests\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|solutionrelative:tests\\controllerstests\\authenticationcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.application\\interfaces\\iclinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|solutionrelative:tabibapp.application\\interfaces\\iclinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D8B1D4B-84BE-459C-A853-2A0690886E27}|TabibApp.Domain\\TabibApp.Domain.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.domain\\repositories\\iclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D8B1D4B-84BE-459C-A853-2A0690886E27}|TabibApp.Domain\\TabibApp.Domain.csproj|solutionrelative:tabibapp.domain\\repositories\\iclinicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tests\\controllerstests\\appointmentcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|solutionrelative:tests\\controllerstests\\appointmentcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tests\\controllerstests\\doctorcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB0BB4D1-6523-42D4-935C-D7086ED35BEB}|Tests\\Tests.csproj|solutionrelative:tests\\controllerstests\\doctorcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.application\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|solutionrelative:tabibapp.application\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3512298-C86F-4A02-930E-9364CDD0F219}|TabibApp.Application\\TabibApp.Application.csproj|solutionrelative:tabibapp.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF44111D-0518-4C51-AD17-A7F74F975C0A}|TabibApp.Infrastructure\\TabibApp.Infrastructure.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF44111D-0518-4C51-AD17-A7F74F975C0A}|TabibApp.Infrastructure\\TabibApp.Infrastructure.csproj|solutionrelative:tabibapp.infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|c:\\users\\laptop world\\onedrive\\documents\\github\\back-end\\tabibapp.api\\tabibapp.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7BBC1FE8-C376-4480-B647-2008426FAF67}|TabibApp.Api\\TabibApp.Api.csproj|solutionrelative:tabibapp.api\\tabibapp.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tests",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\Tests.csproj",
+              "RelativeDocumentMoniker": "Tests\\Tests.csproj",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\Tests.csproj",
+              "RelativeToolTip": "Tests\\Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-23T01:49:09.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TabibApp.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-23T01:30:43.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MedicalHistoryControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\MedicalHistoryControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\ControllersTests\\MedicalHistoryControllerTests.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\MedicalHistoryControllerTests.cs",
+              "RelativeToolTip": "Tests\\ControllersTests\\MedicalHistoryControllerTests.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAewDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:35:39.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "TabibApp.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\appsettings.json",
+              "RelativeToolTip": "TabibApp.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-21T16:04:34.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceContainercs.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Infrastructure\\DependancyInjection\\ServiceContainercs.cs",
+              "RelativeDocumentMoniker": "TabibApp.Infrastructure\\DependancyInjection\\ServiceContainercs.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Infrastructure\\DependancyInjection\\ServiceContainercs.cs",
+              "RelativeToolTip": "TabibApp.Infrastructure\\DependancyInjection\\ServiceContainercs.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T14:10:08.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MedicalHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\MedicalHistoryController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\MedicalHistoryController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\MedicalHistoryController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\MedicalHistoryController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAqwHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:33:47.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMedicalHistoryRecordsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Domain\\Repositories\\IMedicalHistoryRecordsRepository.cs",
+              "RelativeDocumentMoniker": "TabibApp.Domain\\Repositories\\IMedicalHistoryRecordsRepository.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Domain\\Repositories\\IMedicalHistoryRecordsRepository.cs",
+              "RelativeToolTip": "TabibApp.Domain\\Repositories\\IMedicalHistoryRecordsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:33:40.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IClinicService.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Interfaces\\IClinicService.cs",
+              "RelativeDocumentMoniker": "TabibApp.Application\\Interfaces\\IClinicService.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Interfaces\\IClinicService.cs",
+              "RelativeToolTip": "TabibApp.Application\\Interfaces\\IClinicService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:26:29.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClinicController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\ClinicController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\ClinicController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\ClinicController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\ClinicController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAmwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:13:46.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthenticationControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\AuthenticationControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\ControllersTests\\AuthenticationControllerTests.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\AuthenticationControllerTests.cs",
+              "RelativeToolTip": "Tests\\ControllersTests\\AuthenticationControllerTests.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAewFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:05:53.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IClinicRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Domain\\Repositories\\IClinicRepository.cs",
+              "RelativeDocumentMoniker": "TabibApp.Domain\\Repositories\\IClinicRepository.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Domain\\Repositories\\IClinicRepository.cs",
+              "RelativeToolTip": "TabibApp.Domain\\Repositories\\IClinicRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:22:50.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppointmentControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\AppointmentControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\ControllersTests\\AppointmentControllerTests.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\AppointmentControllerTests.cs",
+              "RelativeToolTip": "Tests\\ControllersTests\\AppointmentControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:02:40.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAiwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:50.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAmwKUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T00:01:51.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T18:23:32.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DoctorControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\DoctorControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\ControllersTests\\DoctorControllerTests.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\Tests\\ControllersTests\\DoctorControllerTests.cs",
+              "RelativeToolTip": "Tests\\ControllersTests\\DoctorControllerTests.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAB4AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T23:55:41.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "TabibApp.Api\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAAAJsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T23:53:48.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Implementation\\AuthService.cs",
+              "RelativeDocumentMoniker": "TabibApp.Application\\Implementation\\AuthService.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Implementation\\AuthService.cs",
+              "RelativeToolTip": "TabibApp.Application\\Implementation\\AuthService.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAuwIEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T18:09:26.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "TabibApp.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "TabibApp.Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T18:07:35.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "TabibApp.Infrastructure\\Repositories\\PatientRepository.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "TabibApp.Infrastructure\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T18:08:37.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TabibApp.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\Program.cs",
+              "RelativeToolTip": "TabibApp.Api\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T14:07:13.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TabibApp.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\TabibApp.Api.csproj",
+              "RelativeDocumentMoniker": "TabibApp.Api\\TabibApp.Api.csproj",
+              "ToolTip": "C:\\Users\\LAPTOP WORLD\\OneDrive\\Documents\\GitHub\\Back-end\\TabibApp.Api\\TabibApp.Api.csproj",
+              "RelativeToolTip": "TabibApp.Api\\TabibApp.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-21T14:07:07.924Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 210,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
